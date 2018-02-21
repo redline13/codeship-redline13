@@ -1,0 +1,9 @@
+redline13:
+  image: redline13/codeship:latest
+  volumes:
+    - ./:/test
+  environment:
+    TIMEOUT: 900
+    SUCCESS_RATE: 10
+    RESPONSE_TIME: 5000
+  encrypted_env_file: env.encrypted
