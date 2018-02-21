@@ -4,12 +4,19 @@
     curl -s https://www.redline13.com/Api/LoadTest
     -H \"X-Redline-Auth: ${REDLINE_API_KEY}\"
     -F testType=jmeter-test
-    -F name=CodeShipAndRedLine13
+    -F name=\"CodeShipAndRedLine13\"
+    -F version=3.1
+    -F jvm_args=
+    -F opts=
     -F numServers=1
-    -F storeOutput=T
     -F \"file=@/test/tests/Plexify.jmx\"
+    -F storeOutput=true
     -F servers[0][location]=us-east-1
     -F servers[0][size]=m3.medium
     -F servers[0][num]=1
-    -F servers[0][onDemand]=T
+    -F servers[0][associatePublicIpAddress]=false
+    -F servers[0][securityGroupIds]=
+    -F servers[0][subnetId]=
+    -F servers[0][onDemand]=true
+    -F servers[0][volumeSize]=
     -F servers[0][usersPerServer]=1
